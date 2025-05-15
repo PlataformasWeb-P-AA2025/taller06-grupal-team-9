@@ -18,4 +18,5 @@ session = Session()
 # - SA -> América del Sur
 print("Presentación de los países del continente americano")
 paises_america = session.query(Pais).filter(or_(Pais.continente=="NA", Pais.continente=="SA")).all()
+# Debido a la división en NA y SA, se hace uso del or
 print(paises_america)
